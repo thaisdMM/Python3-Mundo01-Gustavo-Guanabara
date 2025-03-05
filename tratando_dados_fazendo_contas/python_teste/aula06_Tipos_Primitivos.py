@@ -15,11 +15,11 @@ print(type(n2))
 s = n1 + n2
 print('A soma entre {} e {} é: {}'.format(n1, n2, s))
 
-#tipos
-# int= 7, -4, 0, 9875
-# float = 4.5, 0.076, -15.223, 7.0
-# bool = True, False
-# str = 'nome', 'Olá', '7.5', ''
+# tipos
+int= 7, -4, 0, 9875
+float = 4.5, 0.076, -15.223, 7.0
+bool = True, False
+str = 'nome', 'Olá', '7.5', ''
 
 #forma diferente de escrever o print
 
