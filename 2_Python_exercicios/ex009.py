@@ -22,6 +22,7 @@
 # forma que o prof fez :2 é pera formatar 2 digitos e ficar retinho
 
 num = int(input("Digite um número para ver sua tabuada: "))
+print("-"*12)
 print(f"{num} x {1:2} = {num*1}")
 print(f"{num} x {2:2} = {num*2}")
 print(f"{num} x {3:2} = {num*3}")
@@ -32,3 +33,4 @@ print(f"{num} x {7:2} = {num*7}")
 print(f"{num} x {8:2} = {num*8}")
 print(f"{num} x {9:2} = {num*9}")
 print(f"{num} x {10:2} = {num*10}")
+print("-"*12)
