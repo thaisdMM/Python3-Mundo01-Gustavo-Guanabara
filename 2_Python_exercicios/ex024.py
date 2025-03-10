@@ -1,6 +1,6 @@
 # Exercício Python 24: Crie um programa que leia o nome de uma cidade diga se ela começa ou não com o nome “SANTO”.
 
-nome_cidade = input("Digite o nome da cidade: ")
+nome_cidade = input("Digite o nome da cidade: ").split()
 separa_nome = nome_cidade.split()
 comeca_santo = separa_nome[0]
 print(f"O nome {nome_cidade} começa com SANTO/santo?:")
