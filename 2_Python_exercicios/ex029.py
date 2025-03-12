@@ -1,7 +1,6 @@
-# Escrava um programa que laia a velocidade de um carro.
-# Se cie ultrapassar 80Km/h, mostra uma mensagem dizendo que ele foi multado.
-# A multa vai custar
-# R$7.00 por cada Km acima do limita.
+# Escreva um programa que leia a velocidade de um carro.
+# Se velocidade ultrapassar 80Km/h, mostra uma mensagem dizendo que ele foi multado.
+# A multa vai custar R$7.00 por cada Km acima do limite.
 
 velocidade_carro = int(input("Digite a velocidade do carro: "))
 multa = (velocidade_carro - 80) * 7
