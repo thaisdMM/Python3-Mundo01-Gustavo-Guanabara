@@ -4,9 +4,13 @@
 # exceto: exceto anos múltiplos de 100 que não são múltiplos de 400
 
 ano = int(input("Digite um ano para verificar se é bissexto: "))
-verifica_bissexto = ano % 4 == 0
+verifica_bissexto = ano % 4 == 0 and ano % 100 != 0
+verifica_bissexto_excecao = ano % 400 == 0
 
-if verifica_bissexto == True:
+if verifica_bissexto_excecao == True:
    print(f"O ano {ano} é bissexto.")
 else:
-   print(f"O ano {ano} não é bissexto.")
+   if verifica_bissexto == True:
+      print(f"O ano {ano} é bissexto!")
+   else:
+      print(f"O ano {ano} não é bissexto.")
