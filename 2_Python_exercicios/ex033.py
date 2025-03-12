@@ -1,4 +1,5 @@
 # Faça um programa que leia três números a mostra qual é o maior e qual é o menor.
+# eu pus >= e <= para ter sempre uma resposta pq se for igual nao print
 
 n1 = int(input("Digite o primeiro número: "))
 n2 = int(input("Digite o segundo número: "))
