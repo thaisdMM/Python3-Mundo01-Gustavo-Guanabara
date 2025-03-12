@@ -2,21 +2,27 @@
 # "Dados três segmentos de reta distintos, se a soma das medidas de dois deles é sempre maior que a medida do terceiro, então, eles podem formar um triângulo."
 
 
-reta1 = int(input("Digite o número inteiro de cumprimento da reta 1: "))
-reta2 = int(input("Digite o número inteiro de cumprimento da reta 2: "))
-reta3 = int(input("Digite o número inteira de cumprimento da reta 3: "))
-# print(reta1, reta2, reta3) # teste
+# reta1 = float(input("Digite o número floateiro de cumprimento da reta 1: "))
+# reta2 = float(input("Digite o número floateiro de cumprimento da reta 2: "))
+# reta3 = float(input("Digite o número floateira de cumprimento da reta 3: "))
+# # print(reta1, reta2, reta3) # teste
 
-# if reta2 + reta3 > reta1:
-#    print(f"A reta 1 {reta1}cm pode formar uma das retas do triângulo.")
-#    if reta1 +reta3 > reta2:
-#       print(f"A reta 2 {reta2}cm também pode formar uma das retas do triângulo.")
-#       if reta1 + reta2 > reta3:
-#          print(f"TEMOS UM TRIÂNGULO!!! A reta 3 {reta3}cm também pode formar uma das retas de um triângulo.")
+# if reta2 + reta3 > reta1 and reta1 + reta3 > reta2 and reta2 + reta1 > reta3:
+#    print(f"\nTEMOS UM TRIÂNGULO! As medidas são {reta1}cm, {reta2}cm, {reta3}cm")
 # else:
-#    print("Não é possível formar o triângulo!") # o problema é que só entra aqui se a condição 1 nao for verdadeira, no resto nao entra
+#    print(f"\nNão é possível formar um triângulo com as medidas {reta1}cm, {reta2}cm, {reta3}cm")
 
-if reta2 + reta3 > reta1 and reta1 + reta3 > reta2 and reta2 + reta1 > reta3:
-   print(f"\nTEMOS UM TRIÂNGULO! As medidas são {reta1}cm, {reta2}cm, {reta3}cm")
+# Correção professor
+
+print("-=" * 20)
+print("Analisador de Triângulos")
+print("-=" * 20)
+
+r1 = float(input("Primeiro segmento: "))
+r2 = float(input("Segundo segmento: "))
+r3 = float(input("Terceiro segmento: "))
+#print(f"Os três seguimentos são: {r1} {r2} {r3}") # teste
+if r1 < r2 + r3 and r2 < r1 + r3 and r3 < r1 + r2:
+   print("Os segmentos acima PODEM FORMAR triângulo!")
 else:
-   print(f"\nNão é possível formar um triângulo com as medidas {reta1}cm, {reta2}cm, {reta3}cm")
+   print("Os segmentos acima NÃO podem formar triângulo.")
