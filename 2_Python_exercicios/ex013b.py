@@ -1,4 +1,5 @@
-#preco produto, desconto 15% a vista, juros 8% a prazo
+# EXERCÍCIO A MAIS SUGERIDO PELO PROFESSOR
+# preco produto, desconto 15% a vista, juros 8% a prazo
 
 preco_produto = float(input("Qual o preço do produto? R$: "))
 pagamento_a_vista = preco_produto - (preco_produto*15/100)

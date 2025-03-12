@@ -1,6 +1,6 @@
 from math import radians, sin, cos, tan
 
-angulo_graus = float(input("Para calcular o seno, cosseno e a tangente diginte o valor do ângulo: "))
+angulo_graus = float(input("Para calcular o seno, cosseno e a tangente digite o valor do ângulo: "))
 convertendo_angulo_radianos = radians (angulo_graus)
 seno = sin(convertendo_angulo_radianos)
 cosseno = cos(convertendo_angulo_radianos)

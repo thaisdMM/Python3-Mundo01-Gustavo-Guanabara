@@ -46,7 +46,7 @@ print(frase.find("vídeo")) # respota é -1 e a string começa com 0 o que é fa
 print(frase.lower())
 print(frase.lower().find("vídeo")) # transformou primeiro pra minúsculo e depois sim achou
 
-# split> separaou cada frase e criou uma lista
+# split> separou cada frase e criou uma lista
 print(frase.split())
 dividido = frase.split()
 print(dividido)

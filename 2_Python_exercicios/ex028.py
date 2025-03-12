@@ -3,7 +3,7 @@
 from random import randint
 
 numero_random = randint(0,5)
-print(numero_random)
+#print(numero_random) # pus o print para testar se funcionava corretamente
 print("Tente advinhar o número. Você pode escolher do número 0 a 5.")
 numero_usuario = int(input("Digite um numero: "))
 if numero_usuario == numero_random:
