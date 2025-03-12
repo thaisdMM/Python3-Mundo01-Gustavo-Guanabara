@@ -1,4 +1,4 @@
-# Desenvolva um programa que pargunte a distância da uma viagem em Km. Calcula o preço da passagem, cobrando R50.50 por Km para viagens de ate 200km a R$0.45 para viagens mais longas.
+# Desenvolva um programa que pergunte a distância da uma viagem em Km. Calcula o preço da passagem, cobrando R$0.50 por Km para viagens de ate 200km a R$0.45 para viagens mais longas.
 
 distancia_viagem = int(input("Quantos kilometros tem a viagem? "))
 passagem1 = distancia_viagem * 0.50
