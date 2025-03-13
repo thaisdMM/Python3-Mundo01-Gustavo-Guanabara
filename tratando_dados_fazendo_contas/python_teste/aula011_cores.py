@@ -2,18 +2,18 @@
 # no do professor dá pra ver as cores melhores quando ele coloca fundo, já no meu nao acho que tem haver com a extensao dark pro que to usando no meu VS code
 
 
-# #texto vermelho
-# print("\033[31mOlá, mundo!")
+#texto vermelho
+print("\033[31mOlá, mundo!")
 
-# #texto vermelho, fundo amarelo
-# print("\033[31;43mOlá, Thaís!")
+#texto vermelho, fundo amarelo
+print("\033[31;43mOlá, Thaís!")
 
-# # letra negrito, texto vermelho, fundo amarelo até o final da tela
-# print("\033[1;31;43mOlá, Thaís!")
+# letra negrito, texto vermelho, fundo amarelo até o final da tela
+print("\033[1;31;43mOlá, Thaís!")
 
-# print("Bem vindo!!!") # ele tá pegando as configurações anteriores. Vou comentar tudo para fazer os testes
+print("Pegando as configurações anteriores!!!") # ele tá pegando as configurações anteriores. Vou comentar tudo para fazer os testes
 
-# letra negrito, texto vermelho, fundo amarelo só na parte do texto - \033[m fechar as configurações
+#letra negrito, texto vermelho, fundo amarelo só na parte do texto - \033[m fechar as configurações
 print("\033[1;31;43mHello, World!\033[m")
 
 print("Teste") # não está pegando as configurações anteriores
@@ -42,3 +42,22 @@ print("\033[1;7;33;44mFundo amarelo, letra azul\033[m")
 a = 3
 b = 5
 print(f"\nOs valores são \033[32m{a}\033[m e \033[45m{b}\033[m!!!")
+
+# dá apra fazer com o format
+
+nome = "Thaís"
+print("Olá! Muito prazer em te conhecer, {}{}{}!!!".format('\033[4;32m', nome,'\033[m'))
+
+# nome = "Thaís"
+# print(f"Olá! Muito prazer em te conhecer, {'\033[4;32m'}{nome}{'\033[m'}.") # dá erro: f-string expression part cannot include a backslash
+
+# outra forma, usando dicionário: - assim dá pra usar o f"{}"
+
+nome = "Thaís Moreira"
+
+cores = {"limpa": "\033[m",
+         "azul": "\033[34m",
+         "amarelo": "\033[33m",
+         "pretoebranco": "\033[7;37m"}
+
+print(f"Olá, {cores['pretoebranco']}{nome}{cores['limpa']}. Muito prazer em te conhecer!")
