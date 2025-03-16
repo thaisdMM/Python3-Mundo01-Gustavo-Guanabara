@@ -1,4 +1,4 @@
-# Escravo um programa para aprovar o empréstimo bancário para a compra de uma casa. O programa vai parguntar o valor da casa, o salário do comprador o em quantos anos ala vai pagar-
+# Escrava um programa para aprovar o empréstimo bancário para a compra de uma casa. O programa vai parguntar o valor da casa, o salário do comprador o em quantos anos ala vai pagar-
 # Calcula o valor da prostação mensal. sabando que ala não poda exceder 30% do salário ou então o emprestimo sarÁ negado
 
 print("\nEMPRÉSTIMO BANCÁRIO para compra de imóvel.")
