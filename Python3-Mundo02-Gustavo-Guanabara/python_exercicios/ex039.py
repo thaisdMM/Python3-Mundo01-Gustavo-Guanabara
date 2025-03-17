@@ -3,22 +3,31 @@
 from datetime import date
 
 print("\nAlistamento Militar:")
-ano_nascimento = int(input("\nDigite o ano do seu nascimento: "))
-# print(ano_nascimento)
-ano_atual = date.today().year
-# print(ano_atual)
-idade = ano_atual - ano_nascimento
-# print(idade)
 
-if idade == 18:
-    print(f"\nVocê tem {idade} anos. É HORA DE SE ALISTAR!")
-elif idade > 18:
-    tempo = idade - 18
-    print(
-        f"\nVocê tem {idade} anos. JÁ PASSOU DO TEMPOS DE SE ALISTAR {tempo} anos.")
-    print(f"Você deveria ter se alistado em {ano_nascimento + 18}")  # eu
+sexo = input("Digite: M para masculino ou F para feminino: ").strip().upper()
+if sexo == "F":
+    print("Você é mulher e não precisa fazer o alistamento militar obrigatório.")
+
+elif sexo == "M":
+   ano_nascimento = int(input("\nDigite o ano do seu nascimento: "))
+   # print(ano_nascimento)
+   ano_atual = date.today().year
+   # print(ano_atual)
+   idade = ano_atual - ano_nascimento
+   # print(idade)
+
+   if idade == 18:
+      print(f"\nVocê tem {idade} anos. É HORA DE SE ALISTAR!")
+   elif idade > 18:
+      tempo = idade - 18
+      print(
+         f"\nVocê tem {idade} anos. JÁ PASSOU DO TEMPO DE SE ALISTAR {tempo} anos.")
+      print(f"Você deveria ter se alistado em {ano_nascimento + 18}")  # eu
+   else:
+      tempo = 18 - idade
+      print(
+         f"\nVocê tem {idade} anos. VOCÊ AINDA VAI SE ALISTAR daqui há {tempo} anos.")
+      print(f"Você vai se alistar em: {ano_atual + tempo}")  # professor
 else:
-    tempo = 18 - idade
-    print(
-        f"\nVocê tem {idade} anos. VOCÊ AINDA VAI SE ALISTAR daqui há {tempo} anos.")
-    print(f"Você vai se alistar em: {ano_atual + tempo}")  # professor
+   print(f"Opção inválida. Tente novamente!")
+print("\nPrograma finalizado.")
