@@ -19,6 +19,8 @@ if idade == 18:
 elif idade > 18:
    tempo = idade -18
    print(f"\nVocê tem {idade} anos. JÁ PASSOU DO TEMPOS DE SE ALISTAR {tempo} anos.")
+   print(f"Você deveria ter se alistado em {ano_nascimento + 18}") #eu
 else:
    tempo = 18 - idade
    print(f"\nVocê tem {idade} anos. VOCÊ AINDA VAI SE ALISTAR daqui há {tempo} anos.")
+   print(f"Você vai se alistar em: {ano_atual + tempo}") #professor
