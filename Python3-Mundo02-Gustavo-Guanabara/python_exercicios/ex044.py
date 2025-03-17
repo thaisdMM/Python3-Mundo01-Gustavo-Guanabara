@@ -1,9 +1,8 @@
-# Elabore um programa que calcula o valor a ser pago por um produto. considerando o sau preço normal a condição de pagamento:
-# - à vista dinhairot chaque: 10 da desconto
-# - à vista no cartão: 5% de desconto
-# - am até 2u no cartão: prafo normal
-# - 3н ou mais no cartão:
-# 20z da juros
+# Exercício Python 44: Elabore um programa que calcule o valor a ser pago por um produto, considerando o seu preço normal e condição de pagamento:
+# – à vista dinheiro/cheque: 10% de desconto
+# – à vista no cartão: 5% de desconto
+# – em até 2x no cartão: preço formal 
+# – 3x ou mais no cartão: 20% de juros
 
 print("VALOR A SER PAGO POR UM PRODUTO")
 valor_produto = float(input("Qual o valor do produto? R$"))
