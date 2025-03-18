@@ -32,7 +32,7 @@ from time import sleep
 
 itens = ("Pedra", "Papel", "Tesoura")
 escolha_computador = randint(0,2)
-print(f"O computador escolheu {escolha_computador}")
+print(f"O computador escolheu {itens[escolha_computador]}")
 
 # print("""SUAS OPÇÕES:
 # [ 0 ] PEDRA
