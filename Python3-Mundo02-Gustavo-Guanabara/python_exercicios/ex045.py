@@ -33,21 +33,13 @@ from time import sleep
 itens = ("Pedra", "Papel", "Tesoura")
 escolha_computador = randint(0,2)
 #print(f"O computador escolheu {itens[escolha_computador]}")
+escolha_jogador = int(input("Qual é a sua jogada? "))
 
 print("""SUAS OPÇÕES:
 [ 0 ] PEDRA
 [ 1 ] PAPEL
 [ 2 ] TESOURA
 """)
-
-escolha_jogador = int(input("Qual é a sua jogada? "))
-if escolha_computador == 0 and escolha_jogador == 2:
-   venceu = "COMPUTADOR"
-elif escolha_jogador == 0 and escolha_computador == 2:
-   venceu = "JOGADOR"
-
-
-
 
 # print("JO")
 # sleep(1)
@@ -56,8 +48,28 @@ elif escolha_jogador == 0 and escolha_computador == 2:
 # print("PO!!!")
 # sleep(1)
 
-# print("-=-" * 20)
+print("-=-" * 11)
 print(f"Computador jogou: {itens[escolha_computador].upper()}")
 print(f"Jogador jogou: {itens[escolha_jogador].upper()}")
-# print("-=-" * 20)
+print("-=-" * 11)
+
+# # Código do PROFESSOR:
+# if escolha_computador == 0: # COMPUTADOR: PEDRA
+#    if escolha_jogador ==0:
+#       print("EMPATE.")
+#    elif escolha_jogador == 1:
+#       print("JOGADOR VENCE")
+#    elif escolha_jogador == 2:
+#       print("COMPUTADOR VENCE")
+#    else:
+#       print("Jogada inválida!")
+
+# VENCE COMPUTADOR
+if escolha_computador == 0 and escolha_jogador == 2 or escolha_computador == 1 and escolha_jogador == 0 or escolha_computador == 2 and escolha_jogador == 1:
+   venceu = "COMPUTADOR"
+
+# VENCE JOGADOR
+elif escolha_jogador == 0 and escolha_computador == 2 or escolha_jogador == 1 and escolha_computador == 0 or escolha_jogador == 2 and escolha_computador == 1:
+   venceu = "JOGADOR"
+   
 print(f"{venceu} VENCE!")
