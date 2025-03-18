@@ -1,15 +1,4 @@
 # Exercício Python 45: Crie um programa que faça o computador jogar Jokenpô com você.
-# CÓDIGO DO PROFESSOR
-# # Código do PROFESSOR faz isso para 0, 1, 2 do computador. EU FIZ DIFERENTE
-# if escolha_computador == 0: # COMPUTADOR: PEDRA
-#    if escolha_jogador ==0:
-#       print("EMPATE.")
-#    elif escolha_jogador == 1:
-#       print("JOGADOR VENCE")
-#    elif escolha_jogador == 2:
-#       print("COMPUTADOR VENCE")
-#    else:
-#       print("Jogada inválida!")
 
 from random import randint
 from time import sleep
@@ -50,12 +39,8 @@ else:
     elif escolha_computador == 0 and escolha_jogador == 2 or escolha_computador == 1 and escolha_jogador == 0 or escolha_computador == 2 and escolha_jogador == 1:
         print("COMPUTADOR VENCEU!")
 
-    # VENCE JOGADOR
-    elif escolha_jogador == 0 and escolha_computador == 2 or escolha_jogador == 1 and escolha_computador == 0 or escolha_jogador == 2 and escolha_computador == 1:
-        print("JOGADOR VENCEU")
-
-    # 2 tentativa de tratar escolha inválida - nao funciona
+    # VENCE JOGADOR - se não é empate, nem computador ganhou só sobra 1 escolha do computador. Essa escolha perde da do jogador.
     else:
-        print("Escolha inválida.")
+        print("JOGADOR VENCEU")
 
 print("Programa finalizado.")
