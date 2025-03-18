@@ -1,8 +1,10 @@
 # Exercício Python 44: Elabore um programa que calcule o valor a ser pago por um produto, considerando o seu preço normal e condição de pagamento:
 # – à vista dinheiro/cheque: 10% de desconto
 # – à vista no cartão: 5% de desconto
-# – em até 2x no cartão: preço formal 
+# – em até 2x no cartão: preço formal
 # – 3x ou mais no cartão: 20% de juros
+
+# O meu código está certo, porém abaixo copiei o código do professor para ter 2 perspectivas
 
 # print("VALOR A SER PAGO POR UM PRODUTO")
 # valor_produto = float(input("Qual o valor do produto? R$"))
@@ -25,7 +27,7 @@
 #          print(f"Serão {parcelamento} parcelas. O valor da parcela será {valor_produto / parcelamento:.2f}")
 
 
-#Código do PROFESSOR:
+# Código do PROFESSOR:
 
 print("\n{:=^40}".format(" LOJA MOREIRA "))
 valor_produto = float(input("Qual o valor do produto? R$"))
@@ -37,20 +39,22 @@ print(""" FORMAS DE PAGAMENTO
 """)
 condicao_pagamento = int(input("Digite a forma de pagamento: "))
 if condicao_pagamento == 1:
-   preco = valor_produto - (valor_produto * 10 / 100)
+    preco = valor_produto - (valor_produto * 10 / 100)
 elif condicao_pagamento == 2:
-   preco = valor_produto - (valor_produto * 5 / 100)
+    preco = valor_produto - (valor_produto * 5 / 100)
 elif condicao_pagamento == 3:
-   preco = valor_produto
-   parcela = valor_produto / 2
-   print(f"Sua compra será parcelada em 2x de R${parcela} SEM JUROS")
+    preco = valor_produto
+    parcela = valor_produto / 2
+    print(f"Sua compra será parcelada em 2x de R${parcela} SEM JUROS")
 elif condicao_pagamento == 4:
-   preco = valor_produto + (valor_produto * 20 / 100)
-   total_parcelas = int(input("Quantas parcelas: "))
-   parcela = preco / total_parcelas
-   print(f"Sua compra será parcelada em {total_parcelas} de R${parcela:.2f} COM JUROS")
+    preco = valor_produto + (valor_produto * 20 / 100)
+    total_parcelas = int(input("Quantas parcelas: "))
+    parcela = preco / total_parcelas
+    print(
+        f"Sua compra será parcelada em {total_parcelas} de R${parcela:.2f} COM JUROS")
 else:
-   preco = valor_produto
-   print("Opção inválida de pagamento. Tente novamente.")
+    preco = valor_produto
+    print("Opção inválida de pagamento. Tente novamente.")
 
-print(f"O valor do produto é R${valor_produto:.2f} e custará R${preco:.2f} no final")
+print(
+    f"O valor do produto é R${valor_produto:.2f} e custará R${preco:.2f} no final")
