@@ -41,7 +41,12 @@ print("""SUAS OPÇÕES:
 """)
 
 escolha_jogador = int(input("Qual é a sua jogada? "))
-#if escolha_computador == 0 and escolha_jogador == 2:
+if escolha_computador == 0 and escolha_jogador == 2:
+   venceu = "COMPUTADOR"
+elif escolha_jogador == 0 and escolha_computador == 2:
+   venceu = "JOGADOR"
+
+
 
 
 # print("JO")
@@ -55,3 +60,4 @@ escolha_jogador = int(input("Qual é a sua jogada? "))
 print(f"Computador jogou: {itens[escolha_computador].upper()}")
 print(f"Jogador jogou: {itens[escolha_jogador].upper()}")
 # print("-=-" * 20)
+print(f"{venceu} VENCE!")
