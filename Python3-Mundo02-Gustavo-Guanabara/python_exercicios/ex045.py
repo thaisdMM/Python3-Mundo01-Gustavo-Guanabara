@@ -1,6 +1,7 @@
 # Exercício Python 45: Crie um programa que faça o computador jogar Jokenpô com você.
 
-# MEU CÓDIGO
+# MEU CÓDIGO antes de ver a correação. Funciona normalmente, apesar de nao ter criado excessao para escolha invalida
+
 #  from random import choice
 
 # print("-=-" * 13)
@@ -41,12 +42,12 @@ print("""SUAS OPÇÕES:
 [ 2 ] TESOURA
 """)
 
-# print("JO")
-# sleep(1)
-# print("KEN")
-# sleep(1)
-# print("PO!!!")
-# sleep(1)
+print("JO")
+sleep(1)
+print("KEN")
+sleep(1)
+print("PO!!!")
+sleep(1)
 
 print("-=-" * 11)
 print(f"Computador jogou: {itens[escolha_computador].upper()}")
@@ -64,12 +65,27 @@ print("-=-" * 11)
 #    else:
 #       print("Jogada inválida!")
 
+# MEU CÓDIGO - juntando aula e meus conhecimentos
+
+# #  tentativa de tratar escolha Jogador INVALIDA
+# if escolha_jogador != 1 and escolha_jogador != 2 and escolha_jogador != 3:
+#    print("Escolha inválida! Tente novamente.")
+
+# EMPATE:
+
+if escolha_computador == escolha_jogador:
+   print("EMPATE!")
+
 # VENCE COMPUTADOR
-if escolha_computador == 0 and escolha_jogador == 2 or escolha_computador == 1 and escolha_jogador == 0 or escolha_computador == 2 and escolha_jogador == 1:
-   venceu = "COMPUTADOR"
+elif escolha_computador == 0 and escolha_jogador == 2 or escolha_computador == 1 and escolha_jogador == 0 or escolha_computador == 2 and escolha_jogador == 1:
+   print("COMPUTADOR VENCEU!")
 
 # VENCE JOGADOR
 elif escolha_jogador == 0 and escolha_computador == 2 or escolha_jogador == 1 and escolha_computador == 0 or escolha_jogador == 2 and escolha_computador == 1:
-   venceu = "JOGADOR"
-   
-print(f"{venceu} VENCE!")
+   print("JOGADOR VENCEU")
+
+# 2 tentativa de tratar escolha inválida - nao funciona
+else:
+   print("Escolha inválida.")
+
+print("Programa finalizado.")
