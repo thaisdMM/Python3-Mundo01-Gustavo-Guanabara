@@ -32,20 +32,17 @@ from time import sleep
 
 itens = ("Pedra", "Papel", "Tesoura")
 escolha_computador = randint(0,2)
-print(f"O computador escolheu {itens[escolha_computador]}")
+#print(f"O computador escolheu {itens[escolha_computador]}")
 
-# print("""SUAS OPÇÕES:
-# [ 0 ] PEDRA
-# [ 1 ] PAPEL
-# [ 2 ] TESOURA
-# """)
+print("""SUAS OPÇÕES:
+[ 0 ] PEDRA
+[ 1 ] PAPEL
+[ 2 ] TESOURA
+""")
 
+escolha_jogador = int(input("Qual é a sua jogada? "))
+#if escolha_computador == 0 and escolha_jogador == 2:
 
-# print(escolha_computador)
-# escolha_jogador = int(input("Qual é a sua jogada?"))
-# if escolha_computador == 0 and escolha_jogador == 2:
-#    jogada_computador = "PEDRA"
-#    jogada_jogador = "TESOURA"
 
 # print("JO")
 # sleep(1)
@@ -55,6 +52,6 @@ print(f"O computador escolheu {itens[escolha_computador]}")
 # sleep(1)
 
 # print("-=-" * 20)
-# print(f"Computador jogou {jogada_computador}")
-# print(f"Jogador jogou {jogada_jogador}")
+print(f"Computador jogou: {itens[escolha_computador].upper()}")
+print(f"Jogador jogou: {itens[escolha_jogador].upper()}")
 # print("-=-" * 20)
