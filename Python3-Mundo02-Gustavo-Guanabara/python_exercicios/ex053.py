@@ -20,9 +20,12 @@
 frase = input("Digite uma frase para verificar se a frase é PALÍNDROMO: ").strip().lower()
 frase_sem_espaços = frase.replace(" ", "")
 metade_frase = len(frase_sem_espaços) // 2
+palindromo = True
 for i in range(0, metade_frase):
-   if frase_sem_espaços [i] == frase_sem_espaços[-i-1]:
-      palindromo = "É PALÍNDROMO"
-   else:
-      palindromo = "NÃO É PALÍNDROMO"
-print(palindromo)
+   if frase_sem_espaços [i] != frase_sem_espaços[-i-1]:
+      palindromo = False
+if palindromo:
+    print(f"\nA frase: {frase} É PALÍNDROMO.")
+else:
+   print(f"\nA frase: {frase} NÃO É PALÍNDROMO")
+print("\nPrograma finalizado.")
