@@ -16,11 +16,12 @@
 # if frase_sem_espaços == frase_sem_espaços[::-1]:
 #    print("PALINDROMO")
 
-#PALINDROMO COM O LAÇO FOR
+#PALINDROMO COM O LAÇO FOR melhorando eficiência, palindromo como espelho, verificar até a metadade já é o suficiente
 frase = input("Digite uma frase para verificar se a frase é PALÍNDROMO: ").strip().lower()
 frase_sem_espaços = frase.replace(" ", "")
-for i in range(len(frase_sem_espaços)):
-   if frase_sem_espaços == frase_sem_espaços[::-1]:
+metade_frase = len(frase_sem_espaços) // 2
+for i in range(0, metade_frase):
+   if frase_sem_espaços [i] == frase_sem_espaços[-i-1]:
       palindromo = "É PALÍNDROMO"
    else:
       palindromo = "NÃO É PALÍNDROMO"
