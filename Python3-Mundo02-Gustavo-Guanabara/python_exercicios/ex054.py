@@ -1,21 +1,22 @@
-# Crie um programa que laia o ano de nascimanto de sata passoas. No final. mostra quantas passoas ainda não atingiram a maioridade e quantasjf sio maioras.
+# Exercício Python 54: Crie um programa que leia o ano de nascimento de sete pessoas. No final, mostre quantas pessoas ainda não atingiram a maioridade e quantas já são maiores.
 
 from datetime import date
 
 ano_atual = date.today().year
-#print(ano_atual)
-#ano_nascimento = int(input("Qual ano você nasceu? "))
-#idade = ano_atual - ano_nascimento
-#print(idade)
+# print(ano_atual)
+# ano_nascimento = int(input("Qual ano você nasceu? "))
+# idade = ano_atual - ano_nascimento
+# print(idade)
 maioridade = 0
 salvar_idade = " "
 
-for i in range(0,7):
-   ano_nascimento = int(input("Qual ano você nasceu? "))
-   idade = ano_atual - ano_nascimento
+for i in range(0, 7):
+    ano_nascimento = int(input("Em que ano a pessoa nasceu? "))
+    idade = ano_atual - ano_nascimento
 #   print(idade)
-   salvar_idade += f"{idade}, "
-   if idade >= 21:
-      maioridade += 1
+    salvar_idade += f"{idade}, "
+    if idade >= 21:
+        maioridade += 1
 print(f"A idade de todos são: {salvar_idade}")
-print(f"Considerando 21 anos maioridade. Das 7 pessoas, {maioridade} são maiores de idade.")
+print("Considerando 21 anos maioridade:")
+print(f"{7 - maioridade} pessoas são MENORES  de idade e {maioridade} são MAIORES de idade.")
