@@ -1,3 +1,5 @@
+# Exercício Python 47: Crie um programa que mostre na tela todos os números pares que estão no intervalo entre 1 e 50.
+
 # #ESTÁ CORRETO, MAS ABAIXO TEM UMA OPÇAO QUE GASTA MENOS MEMÓRIA, POIS ITERA DE 2 EM 2
 # print("Números PARES entre 1 e 50:")
 # for i in range(1, 51):
@@ -7,5 +9,5 @@
 # print("Fim do programa.")
 
 for i in range(2, 51, 2):
-   print(f"{i}", end=", ")
+    print(f"{i}", end=", ")
 print("Fim do programa.")
