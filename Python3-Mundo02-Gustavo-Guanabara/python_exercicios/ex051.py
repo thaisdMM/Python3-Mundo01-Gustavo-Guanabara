@@ -14,7 +14,7 @@ print("\nFim do programa.")
 
 # CÓDIGO PROFESSOR:
 
-termo1_pa = int(input("Primeiro termo: "))
+termo1_pa = int(input("\nPrimeiro termo: "))
 razao_pa = int(input("Razão: "))
 decimo_termo_pa = termo1_pa + (10 - 1) * razao_pa
 
