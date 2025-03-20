@@ -21,11 +21,13 @@ for i in range(0, 4):
         mulher_menor_20 += 1
 
     if sexo == 1:
-        if homem_mais_velho_range == False:
+      # PRIMEIRO homem encontrado
+        if homem_mais_velho_range == False:  # checar o primeiro e salvar os dados do primeiro
             homem_mais_velho_range = True
             maior_idade_homem = idade
             nome_homem_mais_velho = nome
         else:
+            # JÁ encontramos outro homem antes
             if maior_idade_homem < idade:
                 maior_idade_homem = idade
                 nome_homem_mais_velho = nome
