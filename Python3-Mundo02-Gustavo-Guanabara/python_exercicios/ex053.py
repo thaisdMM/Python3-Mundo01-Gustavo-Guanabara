@@ -54,3 +54,4 @@ if inverso == palavras_sem_espaco:
     print("Temos um PALÍNDROMO!")
 else:
     print("Não temos PALÍNDROMO.")
+
