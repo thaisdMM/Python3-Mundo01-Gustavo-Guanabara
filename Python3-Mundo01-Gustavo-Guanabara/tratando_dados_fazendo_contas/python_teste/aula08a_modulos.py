@@ -1,4 +1,4 @@
-#BIBLIOTECA PADRÃO https://docs.python.org/3.11/library/random.html
+# BIBLIOTECA PADRÃO https://docs.python.org/3.11/library/random.html
 
 # # utilizando a biblioteca importanto tudo
 # import math
@@ -19,6 +19,7 @@
 # num = random.randint(1,10) # número inteiro de 1 até 10
 # print(num)
 
-# BIBLIOTECAS EXTERNAS 
+# BIBLIOTECAS EXTERNAS
 import emoji
+
 print(emoji.emojize("Olá, Mundo :thumbs_up: 🌍"))
