@@ -2,6 +2,8 @@ numero1 = int(input("1° número: "))
 numero2 = int(input("2° número: "))
 # print(numero1, numero2)
 sair_do_programa = False
+soma = numero1 + numero2
+multiplicacao = numero1 * numero2
 
 while sair_do_programa == False:
     print("""
@@ -14,6 +16,10 @@ while sair_do_programa == False:
 [5] SAIR DO PROGRAMA
 """)
     escolha_usuario = int(input("Digite a sua escolha: "))
+
+    if escolha_usuario == 1:
+        print(f"Soma: {numero1} + {numero2} = {soma}")
+
     
     if escolha_usuario == 5:
         sair_do_programa = True
