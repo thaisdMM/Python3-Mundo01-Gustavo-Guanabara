@@ -1,9 +1,18 @@
-sexo = "x"
-while sexo != "M" or sexo != "F":
-    sexo = input("Digite o sexo da pessoa [M] Masculino ou [F] Feminino ").strip().upper()
-    if sexo == "M" or sexo == "F":
-        print(f"O sexo digitado foi: {sexo}")
+sexo_invalido = True
+while sexo_invalido == True:
+    print(
+        """Sexo da pessoa:
+[M] Masculino
+[F] Feminino"""
+    )
+    sexo = input("sexo = ").strip().upper()
+    if sexo != "M" and sexo != "F":
+        sexo_invalido = True
+        print(f"\nOpção é inválida. Tente novamente!")
     else:
-        print("Opção inválida. Tente novamente.")
-
+        sexo_invalido = False
+if sexo == "M":
+    print(f"\nO sexo digitado foi: {sexo}: MASCULINO")
+else:
+    print(f"\nO sexo digitado foi: {sexo}: FEMININO")
 print("\nFim do programa.")
