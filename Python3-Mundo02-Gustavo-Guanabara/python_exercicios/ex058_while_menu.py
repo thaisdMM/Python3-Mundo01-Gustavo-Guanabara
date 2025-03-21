@@ -32,8 +32,12 @@ while sair_do_programa == False:
             maior = numero2
         print(f"MAIOR: entre {numero1} e {numero2} o maior é: {maior}")
     elif escolha_usuario == 4:
-        numero1 = int(input("Novo 1° número: "))
-        numero2 = int(input("Novo 2° número: "))
+        novo_numero1 = int(input("Novo 1° número: "))
+        numero1 = novo_numero1
+        novo_numero2 = int(input("Novo 2° número: "))
+        numero2 = novo_numero2
+        soma = numero1 + numero2
+        multiplicacao = numero1 * numero2
     
     elif escolha_usuario == 5:
         sair_do_programa = True
