@@ -12,12 +12,12 @@ for i in range(0, 10):
     termo1_pa += razao_pa
 print("\nFim do programa.")
 
-# CÓDIGO PROFESSOR:
+# # CÓDIGO PROFESSOR:
 
-termo1_pa = int(input("\nPrimeiro termo: "))
-razao_pa = int(input("Razão: "))
-decimo_termo_pa = termo1_pa + (10 - 1) * razao_pa
+# termo1_pa = int(input("\nPrimeiro termo: "))
+# razao_pa = int(input("Razão: "))
+# decimo_termo_pa = termo1_pa + (10 - 1) * razao_pa
 
-for i in range(termo1_pa, decimo_termo_pa + razao_pa, razao_pa):
-    print(f"{i}", end=" → ")
-print("ACABOU.")
+# for i in range(termo1_pa, decimo_termo_pa + razao_pa, razao_pa):
+#     print(f"{i}", end=" → ")
+# print("ACABOU.")
