@@ -1,7 +1,7 @@
 numero = int(input("Digite um número pra saber o fatorial: "))
 fatorial = 1
 sequencia_fatorial = " "
-contador_fatorial = 0
+numero_fatorial = numero
 
 # for i in range(numero, 0, -1):
 #     #print(i)
@@ -31,7 +31,7 @@ while numero > 0:
 
 #    numero * numero -1
 
-print(f"Fatorial de {numero}: {sequencia_fatorial} = {fatorial}")
+print(f"Fatorial de {numero_fatorial}: {sequencia_fatorial} = {fatorial}")
 
 
 
