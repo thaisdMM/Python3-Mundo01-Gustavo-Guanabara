@@ -16,23 +16,24 @@ continuar_programa = True
 while continuar_programa:
     print(termos_pa, end=", ")
     termos_pa += razao_pa
-    #numero_termos_pa += 1
+    # numero_termos_pa += 1
     primeira_sequencia_termos -= 1
     if primeira_sequencia_termos == 0:
-        novos_termos_pa = int(input("\nQuantos termos da Progressão Aritmética você quer mostrar? "))
-        
+        novos_termos_pa = int(
+            input("\nQuantos termos da Progressão Aritmética você quer mostrar? ")
+        )
+
         if novos_termos_pa == 0:
             continuar_programa = False
         else:
             primeira_sequencia_termos = novos_termos_pa
             print(novos_termos_pa)
-            print(primeiro_termo_pa)
-            
-            print(f"{(termos_pa)}", end=", ")
-            primeira_sequencia_termos -=1
+            #    print(primeiro_termo_pa)
 
-        
-        #print(termos_pa)
+            print(f"{(termos_pa)}", end=", ")
+            primeira_sequencia_termos -= 1
+
+        # print(termos_pa)
     # elif termos_pa <= 10:
     #     print(termos_pa, end=", ")
     #     termos_pa += razao_pa
