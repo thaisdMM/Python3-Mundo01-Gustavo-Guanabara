@@ -2,24 +2,20 @@
 
 # Ex: 0 - 1 - 1 - 2 - 3 - 5 - 8
 
-numero_final_fibonacci = int(input("1° número: "))
-primeiro_numero_fibonacci = 0
-segundo_numero_fibonacci = 1
-fibonacci = 0
-sequencia_fibonacci = 0
-soma = 0
+numero_termos_fibonacci = int(input("Quantos termos terão a sequencia fibonacci? "))
+primeiro_termo = 0
+segundo_termo = 1
+contador_termos = 0
+novos_termos = 0
 
-elementos_sequencia = 0
-while numero_final_fibonacci > 0:
-    #fibonacci =  primeiro_numero_fibonacci, segundo_numero_fibonacci
-    sequencia_fibonacci = primeiro_numero_fibonacci, segundo_numero_fibonacci
-    primeiro_numero_fibonacci = segundo_numero_fibonacci
-    segundo_numero_fibonacci = primeiro_numero_fibonacci + segundo_numero_fibonacci
-    #soma = segundo_numero_fibonacci
-    print(f"SEQUENCIA: {sequencia_fibonacci}")
-    #print(soma)
-    print(f"1: {primeiro_numero_fibonacci}", end=" ")
-    print(segundo_numero_fibonacci, end=" ")
-    numero_final_fibonacci -= 1
-
-# print(sequencia_fibonacci)
+while numero_termos_fibonacci > 0:
+    print(f"Primeiro termo: {primeiro_termo}")
+    print(f"Segundo termo: {segundo_termo}")
+    novos_termos = primeiro_termo, segundo_termo
+    primeiro_termo = segundo_termo
+    segundo_termo = primeiro_termo + segundo_termo
+    
+    print(f"Novos termos: {novos_termos}")
+    contador_termos += 1
+    numero_termos_fibonacci -= 1
+print(contador_termos)
