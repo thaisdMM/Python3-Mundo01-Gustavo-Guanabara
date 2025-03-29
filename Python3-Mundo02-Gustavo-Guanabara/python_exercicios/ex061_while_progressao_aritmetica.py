@@ -1,4 +1,6 @@
-print("PROGRESSÃO ARITMÉTICA")
+# Exercício Python 61: Refaça o DESAFIO 51, lendo o primeiro termo e a razão de uma PA, mostrando os 10 primeiros termos da progressão usando a estrutura while.
+
+print("PROGRESSÃO ARITMÉTICA COM CONTADOR DO NÚMERO DE TERMOS:")
 
 primeiro_termo_pa = int(input("\nDigite o primeiro termo da PA: "))
 razao_pa = int(input("Digite a razão da PA: "))
@@ -18,7 +20,7 @@ print("FIM.")
 # A RESOLUÇÃO ABAIXO NÃO ERA NECESSÁRIA, MAS FUNCIONA.
 # Resolução com a fórmula do 10° termo da pa
 
-print("\nPROGRESSÃO ARITMÉTICA")
+print("\nPROGRESSÃO ARITMÉTICA COM FÓRMULA MATEMÁTICA DO 10 TERMO:")
 
 primeiro_termo_pa = int(input("\nDigite o primeiro termo da PA: "))
 razao_pa = int(input("Digite a razão da PA: "))
