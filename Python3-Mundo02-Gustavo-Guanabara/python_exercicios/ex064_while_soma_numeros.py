@@ -6,11 +6,12 @@ numero_eh_999 = False
 contador = 0
 soma = 0
 
-while contador < 5:
+while numero_eh_999 == False:
     numero = int(input("Digite um número [999 para parar o programa]: "))
     soma += numero
     contador += 1
-    # if numero == 999:
-    #     numero_eh_999 = True
-    # print(f"Digitou o número {numero} para sair do programa.")
+    if numero == 999:
+        soma -= 999
+        numero_eh_999 = True
+        print(f"Digitou o número {numero} para sair do programa.")
 print(f"Você digitou {contador} números e a soma entre eles é {soma}")
