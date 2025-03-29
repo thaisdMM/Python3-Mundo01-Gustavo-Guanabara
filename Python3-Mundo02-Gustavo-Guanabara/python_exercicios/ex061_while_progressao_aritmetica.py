@@ -9,12 +9,15 @@ print(
     f"\nOs 10 primeiros termos da Progressão Aritmética que começa com: {termos_pa} e a razão é: {razao_pa} são: \n"
 )
 while numero_termos < 10:
-    print(termos_pa, end=", ")
+    print(f"{termos_pa} → ", end="")
     termos_pa += razao_pa
     numero_termos += 1
     # print(numero_termos, end="")
+print("FIM.")
 
+# A RESOLUÇÃO ABAIXO NÃO ERA NECESSÁRIA, MAS FUNCIONA.
 # Resolução com a fórmula do 10° termo da pa
+
 print("\nPROGRESSÃO ARITMÉTICA")
 
 primeiro_termo_pa = int(input("\nDigite o primeiro termo da PA: "))
@@ -27,7 +30,8 @@ print(
     f"\nOs 10 primeiros termos da Progressão Aritmética que começa com: {termos_pa} e a razão é: {razao_pa} são: \n"
 )
 while termos_pa <= decimo_termo_pa:
-    print(termos_pa, end=", ")
+    print(f"{termos_pa} → ", end="")
     termos_pa += razao_pa
     numero_termos += 1
     # print(numero_termos, end="")
+print("FIM.")
