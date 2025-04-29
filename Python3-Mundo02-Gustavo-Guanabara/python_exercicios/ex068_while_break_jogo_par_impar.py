@@ -24,14 +24,16 @@ while True:
         resultado = "ímpar"
     print(resultado)
 
+    print("_" * 80)
     print(
-        f"Você jogou {jogador} e o computador jogou {computador}. O total foi: {total} e o resultado foi {resultado}. ",
-        end="",
+        f"Você jogou {jogador} e o computador jogou {computador}. O total foi: {total} e o resultado foi {resultado}. "
     )
+    print("_" * 80)
 
     if resultado == escolha_jogador:
         print("Você Venceu!")
         print("Vamos jogar novamente...")
+        print("-=-" * 10)
         vezes_jogadas += 1
     else:
         print(f"Você Perdeu. Você acertou {vezes_jogadas} vezes seguidas.")
