@@ -9,23 +9,20 @@ while True:
     print("CADASTRO DE PESSOAS")
     print("+-+" * 10)
 
-    idade = int(input("Idade: "))
-    # print(idade)
-    if idade > 18:
-        maior_18 += 1
+    idade = int(input("\nIdade: "))
     sexo = " "
     while sexo not in "MF":
-        sexo = input("[M/F] ").strip().upper()[0]
+        sexo = input("Sexo: [M/F] ").strip().upper()[0]
+    if idade > 18:
+        maior_18 += 1
     if sexo == "M":
         total_homens += 1
-    if sexo == "F":
-        if idade < 20:
-            mulheres_menor_20 += 1
-    # print(sexo)
+    if sexo == "F" and idade < 20:
+        mulheres_menor_20 += 1
     total_cadastro += 1
     continuar = " "
-    while continuar not in "sSNn":
-        continuar = input("Quer continuar? [S/N] ").strip().upper()[0]
+    while continuar not in "SN":
+        continuar = input("\nQuer continuar? [S/N] ").strip().upper()[0]
     if continuar in "nN":
         break
 
