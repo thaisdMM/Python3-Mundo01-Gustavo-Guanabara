@@ -3,20 +3,14 @@
 # B) quantos homens foram cadastrados.
 # C) quantas mulheres tem menos de 20 anos.
 
-print("+-+" * 10)
-print("CADASTRO DE PESSOAS")
-print("+-+" * 10)
-# continuar = "S"
-maior_18 = 0
-total_homens = 0
+maior_18 = total_homens = mulheres_menor_20 = total_cadastro = 0
 while True:
-    continuar = " "
-    while continuar not in "sSNn":
-        continuar = input("Quer continuar? [S/N] ").strip().upper()[0]
-    if continuar in "nN":
-        break
+    print("+-+" * 10)
+    print("CADASTRO DE PESSOAS")
+    print("+-+" * 10)
+
     idade = int(input("Idade: "))
-    print(idade)
+    # print(idade)
     if idade > 18:
         maior_18 += 1
     sexo = " "
@@ -24,8 +18,19 @@ while True:
         sexo = input("[M/F] ").strip().upper()[0]
     if sexo == "M":
         total_homens += 1
-    print(sexo)
+    if sexo == "F":
+        if idade < 20:
+            mulheres_menor_20 += 1
+    # print(sexo)
+    total_cadastro += 1
+    continuar = " "
+    while continuar not in "sSNn":
+        continuar = input("Quer continuar? [S/N] ").strip().upper()[0]
+    if continuar in "nN":
+        break
 
+print(f"O total de pessoas cadastradas foi: {total_cadastro}")
 print(f"O total de pessoas com mais de 18 anos é: {maior_18}")
 print(f"O total de homens cadastrados foi: {total_homens}")
+print(f"O total de mulheres com menos de 20 anos é: {mulheres_menor_20}")
 print("\nPrograma finalizado.")
