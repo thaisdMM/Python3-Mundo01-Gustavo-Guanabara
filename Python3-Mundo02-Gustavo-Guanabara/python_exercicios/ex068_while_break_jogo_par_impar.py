@@ -7,7 +7,7 @@ print("Vamos jogar PAR ou ÍMPAR")
 print("-=-" * 10)
 vezes_jogadas = 0
 while True:
-    computador = randint(1, 10)
+    computador = randint(0, 10)
     # print(computador)
     jogador = int(input("Digite um valor: "))
     escolha_jogador = input("PAR ou ÍMPAR? [P/I]").strip().upper()
