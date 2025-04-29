@@ -5,23 +5,32 @@ from random import randint
 print("-=-" * 10)
 print("Vamos jogar PAR ou ÍMPAR")
 print("-=-" * 10)
-
+vezes_jogadas = 0
 while True:
     computador = randint(1, 10)
     print(computador)
     jogador = int(input("Digite um valor: "))
     escolha_jogador = input("PAR ou ÍMPAR? [P/I]").strip().upper()
-    numeros_jogados = computador + jogador
-    print(numeros_jogados)
-    if numeros_jogados % 2 == 0:
+    total = computador + jogador
+    print(total)
+    if total % 2 == 0:
         resultado = "P"
     else:
         resultado = "I"
     print(resultado)
 
+    # if resultado == "P":
+    #     resultado = "par"
+    # else:
+    #     resultado = "ímpar"
+
+    print(f"Você jogou {jogador} e o computador jogou {computador}. O total foi: {total}. ", end="")
+
     if resultado == escolha_jogador:
         print("Você Venceu!")
+        print("Vamos jogar novamente...")
+        vezes_jogadas += 1
     else:
-        print("Você Perdeu.")
+        print("Você Perdeu. ")
         print("\nPrograma finalizado!")
         break
