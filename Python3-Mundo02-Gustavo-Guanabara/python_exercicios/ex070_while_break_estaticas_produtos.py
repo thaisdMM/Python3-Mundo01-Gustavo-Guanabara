@@ -59,15 +59,15 @@ while True:
     total_compra += preco
     if preco > 1000:
         produto_mais_1000 += 1
-    
-    if total_produtos == 1:
+
+    if total_produtos == 1 or preco < menor_preco:
         menor_preco = preco
         nome_produto_mais_barato = nome_produto
-    else:
-        if menor_preco > preco:
-            menor_preco = preco
-            nome_produto_mais_barato = nome_produto
-            
+    # dá para eliminar o codigo abaixo colocando um or no codigo de cima
+    #  else:
+    #     if preco < menor_preco:
+    #         menor_preco = preco
+    #         nome_produto_mais_barato = nome_produto
 
     continuar = " "
     while continuar not in "SN":
