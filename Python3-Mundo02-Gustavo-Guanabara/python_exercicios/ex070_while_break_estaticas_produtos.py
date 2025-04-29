@@ -34,9 +34,9 @@ while True:
     if continuar == "N":
         break
 print(f"O total de produtos comprado foi: {total_produtos}")
-print(f"O valor total da compra foi: R${total_compra}")
+print(f"O valor total da compra foi: R${total_compra:.2f}")
 print(f"A quantidade de produtos acima de R$1000,00 é: {produto_mais_1000}")
 print(
-    f"O nome do produto mais barato é {nome_produto_mais_barato} e o preço desse produto é {menor_preco}."
+    f"O nome do produto mais barato é {nome_produto_mais_barato} e o preço desse produto é {menor_preco:.2f}."
 )
-print("\nPROGRAMA FINALIZADO!")
+print("\n{:-^40}".format(" PROGRAMA FINALIZADO! "))
