@@ -1,5 +1,5 @@
 print(f"=-=" * 10, "TABUADA", "=-=" * 10)
-print("\n0 e números negativos param o programa.")
+print("\nNúmeros negativos param o programa.")
 # contador = 1
 while True:
     print("-" * 40)
