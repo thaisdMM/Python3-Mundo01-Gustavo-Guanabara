@@ -8,7 +8,7 @@ print("CADASTRO DE PESSOAS")
 print("+-+" * 10)
 # continuar = "S"
 maior_18 = 0
-numero_homens = 0
+total_homens = 0
 while True:
     continuar = " "
     while continuar not in "sSNn":
@@ -22,7 +22,10 @@ while True:
     sexo = " "
     while sexo not in "MF":
         sexo = input("[M/F] ").strip().upper()[0]
+    if sexo == "M":
+        total_homens += 1
     print(sexo)
 
 print(f"O total de pessoas com mais de 18 anos é: {maior_18}")
+print(f"O total de homens cadastrados foi: {total_homens}")
 print("\nPrograma finalizado.")
