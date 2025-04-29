@@ -11,26 +11,29 @@ while True:
     print(computador)
     jogador = int(input("Digite um valor: "))
     escolha_jogador = input("PAR ou ÍMPAR? [P/I]").strip().upper()
+    if escolha_jogador == "P":
+        escolha_jogador = "par"
+    else:
+        escolha_jogador = "ímpar"
+
     total = computador + jogador
     print(total)
     if total % 2 == 0:
-        resultado = "P"
+        resultado = "par"
     else:
-        resultado = "I"
+        resultado = "ímpar"
     print(resultado)
 
-    # if resultado == "P":
-    #     resultado = "par"
-    # else:
-    #     resultado = "ímpar"
-
-    print(f"Você jogou {jogador} e o computador jogou {computador}. O total foi: {total}. ", end="")
+    print(
+        f"Você jogou {jogador} e o computador jogou {computador}. O total foi: {total} e o resultado foi {resultado}. ",
+        end="",
+    )
 
     if resultado == escolha_jogador:
         print("Você Venceu!")
         print("Vamos jogar novamente...")
         vezes_jogadas += 1
     else:
-        print("Você Perdeu. ")
+        print(f"Você Perdeu. Você acertou {vezes_jogadas} vezes seguidas.")
         print("\nPrograma finalizado!")
         break
