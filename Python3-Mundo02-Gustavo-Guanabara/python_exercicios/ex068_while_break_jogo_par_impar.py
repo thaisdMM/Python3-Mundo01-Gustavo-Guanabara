@@ -8,7 +8,7 @@ print("-=-" * 10)
 vezes_jogadas = 0
 while True:
     computador = randint(1, 10)
-    print(computador)
+    # print(computador)
     jogador = int(input("Digite um valor: "))
     escolha_jogador = input("PAR ou ÍMPAR? [P/I]").strip().upper()
     if escolha_jogador == "P":
@@ -17,12 +17,12 @@ while True:
         escolha_jogador = "ímpar"
 
     total = computador + jogador
-    print(total)
+    # print(total)
     if total % 2 == 0:
         resultado = "par"
     else:
         resultado = "ímpar"
-    print(resultado)
+    # print(resultado)
 
     print("_" * 80)
     print(
