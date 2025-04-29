@@ -10,7 +10,9 @@ while True:
     computador = randint(0, 10)
     # print(computador)
     jogador = int(input("Digite um valor: "))
-    escolha_jogador = input("PAR ou ÍMPAR? [P/I]").strip().upper()
+    escolha_jogador = " "
+    while escolha_jogador not in "PI":
+        escolha_jogador = input("PAR ou ÍMPAR? [P/I]").strip().upper()[0]
     if escolha_jogador == "P":
         escolha_jogador = "par"
     else:
