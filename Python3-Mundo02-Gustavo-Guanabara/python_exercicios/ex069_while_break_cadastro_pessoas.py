@@ -15,5 +15,8 @@ while True:
         break
     idade = int(input("Idade: "))
     print(idade)
-    sexo = input("M/F").strip().upper()[0]
+    sexo = " "
+    while sexo not in "MF":
+        sexo = input("[M/F] ").strip().upper()[0]
+    print(sexo)
 print("\nPrograma finalizado.")
