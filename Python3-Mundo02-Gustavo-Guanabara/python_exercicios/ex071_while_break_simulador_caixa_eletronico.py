@@ -36,31 +36,86 @@ print("BANCO MOREIRA")
 print("-" * 15)
 
 valor = int(input("Qual valor você quer sacar? R$"))
-valor_atual = valor_restante = quantia_entregue = troca_cedula = 0
+valor_atual = valor_restante = quantia_entregue = troca_cedula = numero_cedulas = 0
 cedula = 50
-while valor != 0:
-    valor_atual = valor // cedula
-    quantia_entregue = valor_atual * cedula
-    valor_restante = valor - quantia_entregue
-    print(valor_atual)
-    print(quantia_entregue)
-    print(valor_restante)
-    print(f"Total de {valor_atual} cedulas de R$50")
-    troca_cedula +=1
-    cedula = 20
-    valor_atual = valor_restante // cedula
-    print(valor_atual)
-    print(quantia_entregue)
-    print(valor_restante)
-    print(f"Total de {valor_atual} cedulas de R$20")
-    troca_cedula +=1
-    cedula = 10
-    print(valor_atual)
-    print(quantia_entregue)
-    print(valor_restante)
-    print(f"Total de {valor_atual} cedulas de R$10")
+while True:
 
-    break
+    valor_atual = valor
+    numero_cedulas = valor_atual // cedula
+    quantia_entregue = numero_cedulas * cedula
+    valor_restante = valor_atual - quantia_entregue
+    valor = valor_restante
+    print(f"VALOR ATUAL: {valor_atual}")
+    print(f"NUMERO DE CEDULAS: {numero_cedulas}")
+    print(f"QUANTIA ENTREGUE: {quantia_entregue}")
+    print(f"VALOR RESTANTE: {valor_restante}")
+    print(f"Total de {numero_cedulas} cedulas de R${cedula}")
+    print(f"VALOR ATUALIZADO {valor}")
+    troca_cedula += 1
+    if valor_restante == 0:
+        break
+    elif cedula == 50:
+        cedula = 20
+    elif cedula == 20:
+        cedula = 10
+    elif cedula == 10:
+        cedula = 1
+
+    # troca_cedula +=1
+    # if valor_restante % 50 != 0:
+    #     cedula = 20
+    #     print(f"Total de {numero_cedulas} cedulas de R$20")
+    #     print(f"VALOR ATUAL: {valor_atual}")
+    #     print(f"NUMERO DE CEDULAS: {numero_cedulas}")
+    #     print(f"QUANTIA ENTREGUE: {quantia_entregue}")
+    #     print(f"VALOR RESTANTE: {valor_restante}")
+    #     print(f"Total de {numero_cedulas} cedulas de R$50")
+    #     print(f"VALOR ATUALIZADO {valor}")
+
+    # elif valor_restante % 20 != 0:
+    #     cedula = 10
+    #     print(f"Total de {numero_cedulas} cedulas de R$10")
+    # elif valor_restante % 10 != 0:
+    #     print(f"Total de {numero_cedulas} cedulas de R$1")
+    # if valor_restante == 0:
+    #     break
+    # # print(f"VALOR ATUAL: {valor_atual}")
+    # print(f"NUMERO DE CEDULAS: {numero_cedulas}")
+    # print(f"QUANTIA ENTREGUE: {quantia_entregue}")
+    # print(f"VALOR RESTANTE: {valor_restante}")
+    # print(f"Total de {numero_cedulas} cedulas de R$50")
+    # troca_cedula +=1
+    # cedula = 10
+    # print(f"VALOR ATUAL: {valor_atual}")
+    # print(f"NUMERO DE CEDULAS: {numero_cedulas}")
+    # print(f"QUANTIA ENTREGUE: {quantia_entregue}")
+    # print(f"VALOR RESTANTE: {valor_restante}")
+    # print(f"Total de {numero_cedulas} cedulas de R$50")
+    # troca_cedula +=1
+    # cedula = 1
+    # print(f"VALOR ATUAL: {valor_atual}")
+    # print(f"NUMERO DE CEDULAS: {numero_cedulas}")
+    # print(f"QUANTIA ENTREGUE: {quantia_entregue}")
+    # print(f"VALOR RESTANTE: {valor_restante}")
+    # print(f"Total de {numero_cedulas} cedulas de R$50")
 
 
+    # # valor_atual = valor_restante // cedula
+    # # print(valor_atual)
+    # # print(quantia_entregue)
+    # # print(valor_restante)
+    # # print(f"Total de {valor_atual} cedulas de R$20")
+    # # troca_cedula +=1
+    # # cedula = 10
+    # # print(valor_atual)
+    # # print(quantia_entregue)
+    # # print(valor_restante)
+    # # print(f"Total de {valor_atual} cedulas de R$10")
+
+print(f"TROCA DE CEDULA: {troca_cedula}")
+
+# print(f"Total de {cedula} cedulas de R$50")
+# print(f"Total de {cedula} cédulas de R$20")
+# print(f"Total de {cedulas_10} cédulas de R$10")
+# print(f"Total de {cedulas_1} cédulas de R$1")
 print("\nPrograma finalizado.")
