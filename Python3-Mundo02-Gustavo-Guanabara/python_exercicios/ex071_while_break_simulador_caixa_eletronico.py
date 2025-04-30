@@ -4,11 +4,20 @@ print("-" * 15)
 cedulas_50 = cedulas_20 = 0
 while True:
     valor = int(input("Qual o valor você quer sacar? R$ "))
-    if valor % 50 == 0:
-        cedulas_50 = valor / 50
 
-    elif valor % 20 == 0:
-        cedulas_20 = valor / 20
+    
+    for i in range(valor):
+        if valor / 50:
+            cedulas_50 = valor // 50
+        if (valor % 50 != 0) / 20:
+            cedulas_20 = (valor % 50) // 20
+        #print(valor / 50)
+
+    # if valor % 50 == 0:
+    #     cedulas_50 = valor / 50
+
+    # elif valor % 20 == 0:
+    #     cedulas_20 = valor / 20
     break
     # if valor % 50 == 0:
     #     cedulas_50 +=1
