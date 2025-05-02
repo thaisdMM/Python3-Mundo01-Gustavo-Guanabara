@@ -35,5 +35,5 @@ while True:
         for contador in range(0, len(numeros_extenso)):
             # print(contador, end=" ")
             if numero == contador:
-                print(numeros_extenso[contador])
+                print(f"Você digitou o número {numeros_extenso[contador]}")
         break
