@@ -33,9 +33,22 @@ print(f"\nO 5 primeiros colocados são: {times_serie_b[:5]}")
 print(estilo * 20)
 print(f"\nOs 4 últimos colocados são: {times_serie_b[-4:]}")
 print(estilo * 20)
-chapecoense = 0
-for contador in range(0, len(times_serie_b)):
-    if times_serie_b[contador] == "Chapecoense":
-        chapecoense = contador + 1
-print(f"\nO time da Chapecoense está na {chapecoense}ª classificação.")
+print(
+    f"""Os times em ordem alfabética são: 
+      
+{sorted(times_serie_b)}"""
+)
+print(estilo * 20)
+# código PROFESSOR
+print(
+    f"\nO time da Chapecoense está na {times_serie_b.index('Chapecoense') + 1}ª posição."
+)
+
+# Meu código. Está correto, mas o do professor é mais simples.
+
+# chapecoense = 0
+# for contador in range(0, len(times_serie_b)):
+#     if times_serie_b[contador] == "Chapecoense":
+#         chapecoense = contador + 1
+# print(f"\nO time da Chapecoense está na {chapecoense}ª classificação.")
 print(estilo * 20)
