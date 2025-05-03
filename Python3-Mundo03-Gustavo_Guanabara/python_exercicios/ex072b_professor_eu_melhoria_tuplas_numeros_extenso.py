@@ -30,15 +30,15 @@ while True:
         print(f"Você digitou o número {numeros_extenso[numero]}")
         contador_numeros_extenso += 1
         continuar = input("Quer continuar? [S/N] ").strip().upper()[0]
-        #continuar = " "
+        # continuar = " "
         while continuar not in "SN":
             print("Comando inválido. Tente novamente.")
             continuar = input("Quer continuar? [S/N] ").strip().upper()[0]
-        
+
         if continuar == "N":
             break
-        if continuar == "S":
-            print("Voce escolheu continuar.")
+        # if continuar == "S":
+        #     print("Você escolheu continuar.")
     else:
         print("Tente novamente. ", end="")
 print(f"Você exibiu {contador_numeros_extenso} números por extenso.")
