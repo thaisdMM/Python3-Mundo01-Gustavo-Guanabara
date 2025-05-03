@@ -57,6 +57,9 @@ print(len(produtos_precos))
 # print(f"Tupla ordenada: {sorted(produtos_precos)}")
 # TypeError: '<' not supported between instances of 'float' and 'str'
 
-# for produtos in range(0, len(produtos_precos)):
+# for produtos in range(0, len(produtos_precos), 2):
 #     print(f"{produtos_precos[produtos]} {estilo}", end="")
-#     print(f"R${produtos_precos[produtos]}")
+#     for i in tupla_float:
+#         print(i)
+
+    # print(f"R${tupla_float[i]}")
