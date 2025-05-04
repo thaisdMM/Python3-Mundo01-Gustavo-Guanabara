@@ -36,14 +36,14 @@ print(f"Essa lista tem {len(num)} elementos.")
 num.insert(2, 0)
 print(num)
 
-# # REMOÇÃO DE ELEMENTOS
-# # POP - sem parametros remove o último elemento
-# num.pop()
-# print(num)
+# REMOÇÃO DE ELEMENTOS
+# POP - sem parametros remove o último elemento
+num.pop()
+print(num)
 
-# # POP com paramentro
-# num.pop(2)
-# print(num)
+# POP com paramentro
+num.pop(2)
+print(num)
 
 # RESULTADO DO TERMINAL DO CÓDIGO ATÉ AGORA
 # 2, 5, 9, 1]
