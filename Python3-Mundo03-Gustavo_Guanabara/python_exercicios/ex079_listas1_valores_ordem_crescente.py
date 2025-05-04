@@ -27,4 +27,12 @@ while True:
             elif valor in valores:
                 print("Valor duplicado. Não vou adicionar.")
         continuar = input("Quer continuar? [S/N] ").strip().upper()[0]
-print(f"Você digitou {contador} valores. São: {valores}")
+print("=-" * 30)
+# print(valores)
+
+# sem mudar a lista:
+#  print(sorted(valores))
+# mudando a lista:
+valores.sort()
+
+print(f"\nVocê digitou {contador} valores. São: {valores}")
