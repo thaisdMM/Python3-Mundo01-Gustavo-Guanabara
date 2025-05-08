@@ -12,14 +12,14 @@ abriu_paretense = fechou_parentese = contador = 0
 if "(" not in expressoes_usuarios and ")" not in expressoes_usuarios:
     print(f"A expressão é inválida. Sequer tem parenteses.")
 if expressoes_usuarios[0] == ")":
-    print("Expressao aberta inválidamente.")
+    print("Expressão aberta inválidamente.")
 elif expressoes_usuarios[-1] == "(":
-    print("Expressao fechada inválidamente.")
+    print("Expressão fechada inválidamente.")
 else:
     for valores in expressoes_usuarios:
         if valores == ")":
             fechou_parentese -= 1
-        elif valores == "(":
+        if valores == "(":
             abriu_paretense += 1
         total_parenteses = fechou_parentese + abriu_paretense
         if total_parenteses < 0:
