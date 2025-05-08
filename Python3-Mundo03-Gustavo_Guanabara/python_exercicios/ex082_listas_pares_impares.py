@@ -1,8 +1,10 @@
+# Exercício Python 082: Crie um programa que vai ler vários números e colocar em uma lista. Depois disso, crie duas listas extras que vão conter apenas os valores pares e os valores ímpares digitados, respectivamente. Ao final, mostre o conteúdo das três listas geradas.
+
 numeros_completos = []
 numeros_pares = []
 numeros_impares = []
 
-while True:    
+while True:
     numeros_completos.append(int(input("Digite um número: ")))
     continuar = input("Quer continuar? [S/N] ").strip().upper()[0]
     while continuar not in "SN":
