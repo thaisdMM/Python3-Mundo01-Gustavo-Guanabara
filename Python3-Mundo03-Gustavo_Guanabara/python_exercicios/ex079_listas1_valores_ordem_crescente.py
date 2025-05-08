@@ -1,11 +1,11 @@
+# Exercício Python 079: Crie um programa onde o usuário possa digitar vários valores numéricos e cadastre-os em uma lista. Caso o número já exista lá dentro, ele não será adicionado. No final, serão exibidos todos os valores únicos digitados, em ordem crescente.
+
 valores = []
 contador = 0
 while True:
     if contador == 0:
         valor = int(input("Digite um valor: "))
-        valores += [
-            valor,
-        ]
+        valores.append(valor)
         print(f"Valor {valor} adicionado com sucesso!")
         # print(f"Valore: {valores}")
         continuar = input("Quer continuar? [S/N] ").strip().upper()[0]
@@ -19,9 +19,7 @@ while True:
         if continuar == "S":
             valor = int(input("Digite um valor: "))
             if valor not in valores:
-                valores += [
-                    valor,
-                ]
+                valores.append(valor)
                 print(f"Valor {valor} adicionado com sucesso!")
                 contador += 1
             elif valor in valores:
