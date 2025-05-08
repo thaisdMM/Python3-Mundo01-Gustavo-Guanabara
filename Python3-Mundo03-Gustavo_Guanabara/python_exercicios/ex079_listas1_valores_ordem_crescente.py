@@ -32,5 +32,21 @@ print("=-" * 30)
 #  print(sorted(valores))
 # mudando a lista:
 valores.sort()
-
 print(f"\nVocê digitou {contador} valores. São: {valores}")
+
+# CORREÇÃO PROFESSOR:
+
+valores = list()
+while True:
+    numero = int(input("Digite um valor: "))
+    if numero not in valores:
+        valores.append(numero)
+        print(f"Número {numero} adicionado com sucesso!")
+    else:
+        print("Número duplicado! Não vou adicionar.")
+    continuar = input("Quer continuar? [S/N] ").strip().upper()[0]
+    if continuar in "N":
+        break
+print("-=" * 30)
+valores.sort()
+print(f"A lista de valores é: {valores}")
