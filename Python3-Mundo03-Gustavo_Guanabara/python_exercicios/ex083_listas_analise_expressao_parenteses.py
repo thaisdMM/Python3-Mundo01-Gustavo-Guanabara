@@ -1,3 +1,5 @@
+# Exercício Python 083: Crie um programa onde o usuário digite uma expressão qualquer que use parênteses. Seu aplicativo deverá analisar se a expressão passada está com os parênteses abertos e fechados na ordem correta.
+
 expressoes_usuarios = list(
     input(
         "Digite uma expressão matemática que use parênteses para ver se a expressão está correta: "
