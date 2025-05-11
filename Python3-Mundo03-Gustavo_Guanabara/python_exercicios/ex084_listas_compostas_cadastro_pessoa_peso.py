@@ -52,8 +52,8 @@ for pessoa in lista_pessoas:
     if pessoa[1] == menor_peso:
         lista_menor_peso.append(pessoa[0])
 
-print(f"O maior peso da lista foi {maior_peso} e as pessoas foram: {lista_maior_peso}")
+print(f"O maior peso da lista foi {maior_peso}Kg e as pessoas foram: {lista_maior_peso}")
 print(
-    f"\nO menor peso da lista foi {menor_peso} e as pessoas foram: {lista_menor_peso}"
+    f"\nO menor peso da lista foi {menor_peso}Kg e as pessoas foram: {lista_menor_peso}"
 )
 print("Programa finalizado.")
