@@ -1,34 +1,33 @@
-# matriz_lista = []
-# linha_matriz = []
-# for linha in range(0, 3):
-#     for coluna in range(0, 3):
-#         linha_matriz.append(int(input(f"Dogite um valor para [{linha}, {coluna}] ")))
-#         print(f"Linha_matriz: {linha_matriz}")
-#     matriz_lista.append(linha_matriz[:])
-#     linha_matriz.clear()
-#     print(f"Matriz no range: {matriz_lista}")
-# print("=-" * 30)
-# print(f"Matriz: {matriz_lista}")
-# for valor in matriz_lista:
-#     print(valor)
+# Exercício Python 086: Crie um programa que declare uma matriz de dimensão 3×3 e preencha com valores lidos pelo teclado. No final, mostre a matriz na tela, com a formatação correta.
 
-# TENTATIVA DE FAZER IGUAL O DO PROFESSOR, POIS A EXIBIÇÃO DO RESULTADO DO MEU ESTAVA ERRADA.
 matriz_lista = []
-linha_matriz = []
+numeros_matriz = []
 for linha in range(0, 3):
     for coluna in range(0, 3):
-        linha_matriz.append(int(input(f"Dogite um valor para [{linha}, {coluna}] ")))
-        print(f"Linha_matriz: {linha_matriz}")
-        matriz_lista.append(linha_matriz[:])
-        linha_matriz.clear()
-    print(f"Matriz no range: {matriz_lista}")
+        numeros_matriz.append(int(input(f"Digite um valor para [{linha}, {coluna}] ")))
+        # print(f"Linha_matriz: {linha_matriz}")
+    matriz_lista.append(numeros_matriz[:])
+    numeros_matriz.clear()
+    # print(f"Matriz no range: {matriz_lista}")
 print("=-" * 30)
-print(f"Matriz: {matriz_lista}")
-for posicao, valor in enumerate(matriz_lista):
-    if posicao < 3:
-        print(valor, end=" ")
-    if posicao < 6:
-        print(f"{valor}", end=" ")
-        print()
-    else:
-        print(valor, end=" ")
+# print(f"Matriz: {matriz_lista}")
+# # aqui não imprime com a formatação do professor, por isso o código abaixo para imprimir 1 a 1 [] formatado
+# for valor in matriz_lista:
+#     print(f"[{valor}]")
+for linha in range(0, 3):
+    for coluna in range(0, 3):
+        print(f"[{matriz_lista[linha][coluna]:^5}]", end="")
+    print()
+
+# Correção do PROFESSOR
+
+matriz_lista = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+for linha in range(0, 3):
+    for coluna in range(0, 3):
+        matriz_lista[linha][coluna] = int(
+            input(f"\nDigite um valor para a [{linha}, {coluna}] ")
+        )
+for linha in range(0, 3):
+    for coluna in range(0, 3):
+        print(f"[{matriz_lista[linha] [coluna]:^5}]", end="")
+    print()
