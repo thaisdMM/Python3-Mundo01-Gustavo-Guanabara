@@ -121,7 +121,7 @@ for i in range(0,3):
     estado["uf"] = input("Unidade Federativa: ")
     estado["sigla"] = input("Sigla do Estado: ")
     brasil.append(estado.copy())
-O primeiro for é da lista, o segundo será do dicionário    
+## O primeiro for é da lista, o segundo será do dicionário    
 for estado in brasil:
     #print(f"estado {estado}")
     for key, value in estado.items():
