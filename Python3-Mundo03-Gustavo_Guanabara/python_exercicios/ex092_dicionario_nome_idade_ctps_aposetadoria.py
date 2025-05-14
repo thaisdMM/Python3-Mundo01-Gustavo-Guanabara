@@ -17,11 +17,8 @@ while True:
         pessoa["apossentadoria"] = (35 - tempo_contribuicao) + idade
 
         break
-# tempo_contribuicao = ano_atual - pessoa["contratação"]
 # #print(f"tempo de contribuição: {tempo_contribuicao}")
-# aposentadoria = (35 - tempo_contribuicao) + idade
-# #print(f"aposentadoria: {aposentadoria}")
-# pessoa["aposentadoria"] = aposentadoria
+# #print(f"aposentadoria: {pessoa["aposentadoria"]}")
 # print(f"Dados da pessoa: {pessoa}")
 print("=-" * 5, f" DADOS DA PESSOA ", "=-" * 5)
 for key, value in pessoa.items():
