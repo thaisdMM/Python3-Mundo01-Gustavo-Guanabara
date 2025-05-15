@@ -40,8 +40,10 @@ while True:
         break
     else:
         for posicao, valor in enumerate(lista_aproveitamento_jogadores):
-            if resposta == posicao + 1:
+            if resposta -1 == posicao:
             #if resposta <= len(lista_aproveitamento_jogadores) -1:
                 print(f"-- LEVANTAMENTO DO JOGADOR {valor['nome']}: ")
-                for jogo, gol in enumerate(lista_gols):
-                    print(f"No jogo {jogo +1} fez {gol} gols.")
+                for gol in valor["gols"]:
+                    print(f"No jogo {posicao+1} fez {gol}") 
+                # for jogo, gol in enumerate(lista_gols):
+                #     print(f"No jogo {jogo +1} fez {gol} gols.")
