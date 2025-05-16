@@ -45,9 +45,7 @@ while True:
     if resposta == 0 or resposta > len(lista_aproveitamento_jogadores):
         print(f"Jogador inexistente. Verifique o código do jogador.")
     else:
-        for posicao, valor in enumerate(lista_aproveitamento_jogadores):
-            if resposta - 1 == posicao:
-                # if resposta <= len(lista_aproveitamento_jogadores) -1:
-                print(f"-- LEVANTAMENTO DO JOGADOR {valor['nome']}: ")
-                for partida, gol in enumerate(valor["gols"]):
-                    print(f"No jogo {partida+1} fez {gol}")
+        jogador = lista_aproveitamento_jogadores[resposta - 1]
+        print(f"-- LEVANTAMENTO DO JOGADOR {jogador['nome']}: ")
+        for partida, gol in enumerate(jogador["gols"]):
+            print(f"No jogo {partida+1} fez {gol}")
