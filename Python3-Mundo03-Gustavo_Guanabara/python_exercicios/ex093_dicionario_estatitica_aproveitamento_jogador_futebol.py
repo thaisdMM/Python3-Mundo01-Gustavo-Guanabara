@@ -7,14 +7,11 @@ aproveitamento_jogador["nome"] = input("Nome do jogador: ").strip().title()
 partidas = int(input(f"Quantas partidas {aproveitamento_jogador['nome']} jogou? "))
 for gols in range(1, partidas + 1):
     gols_marcados = int(input(f"Quantos gols na partida  {gols}? "))
-    # total_gols += gols_marcados
     gols_por_partida.append(gols_marcados)
     # print(f"lista: {gols_por_partida}")
 # print(f"lista de gols por partida: {gols_por_partida}")
-# print(f"total de gols marcados {total_gols}")
 aproveitamento_jogador["gols"] = gols_por_partida[:]
 # print(f"lista {aproveitamento_jogador}")
-# aproveitamento_jogador["total"] = total_gols
 aproveitamento_jogador["total"] = sum(gols_por_partida)
 print("=-" * 30)
 print(f"{aproveitamento_jogador}")
