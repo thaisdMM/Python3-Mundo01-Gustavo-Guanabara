@@ -4,19 +4,10 @@ from time import sleep
 def contador(inicio, fim, passo):
     if passo == 0:
         passo = 1
-        # print("=-" * 30)
-        # print(f"Contagem de {inicio} até {fim} de {passo} em {passo}")
-
     if passo < 0 and inicio > fim:
         passo = passo
-    #     print("=-" * 30)
-    #     print(f"Contagem de {inicio} até {fim} de {-passo} em {-passo}")
     elif inicio > fim:
         passo = -(passo)
-        # print("=-" * 30)
-        # print(f"Contagem de {inicio} até {fim} de {-passo} em {-passo}")
-
-    # else:
     # utilizando a função abs() para printar o valor absoluto do número no passo, sem positivo ou negativo, mas no range vai continuar o passo correto, seja ele negativo ou positivo
     print("=-" * 30)
     print(f"Contagem de {inicio} até {fim} de {abs(passo)} em {abs(passo)}")
@@ -25,10 +16,10 @@ def contador(inicio, fim, passo):
         sleep(0.5)
     print("FIM!")
     print()
-    
+
+
 contador(1, 10, 1)
 contador(10, 0, 2)
-
 print("Agora é sua vez de personalizar a contagem!")
 inicio = int(input("Início: "))
 fim = int(input("Fim: "))
