@@ -1,13 +1,14 @@
 # Exercício Python 096: Faça um programa que tenha uma função chamada área(), que receba as dimensões de um terreno retangular (largura e comprimento) e mostre a área do terreno.
 
 
-def area():
+def area(largura, cumprimento):
     area_retangulo = largura * cumprimento
-    print(f"A área de um terreno {largura}x{cumprimento} é de {area_retangulo}m.")
+    print(f"A área de um terreno {largura}x{cumprimento} é de {area_retangulo}m².")
 
 
+# programa principal
 print("Controle de Terrenos")
 print("-" * 30)
 largura = float(input("LARGURA (m): "))
 cumprimento = float(input("CUMPRIMENTO (m): "))
-area()
+area(largura, cumprimento)
