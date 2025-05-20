@@ -4,9 +4,7 @@ from time import sleep
 def contador(inicio, fim, passo):
     if passo == 0:
         passo = 1
-    if passo < 0 and inicio > fim:
-        passo = passo
-    elif inicio > fim:
+    if inicio > fim and passo > 0:
         passo = -(passo)
     # utilizando a função abs() para printar o valor absoluto do número no passo, sem positivo ou negativo, mas no range vai continuar o passo correto, seja ele negativo ou positivo
     print("=-" * 30)
