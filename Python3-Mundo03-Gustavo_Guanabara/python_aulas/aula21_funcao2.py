@@ -1,4 +1,4 @@
-# AJUDA INTERATIVA - HELP()
+# 1- AJUDA INTERATIVA - HELP()
 
 help(print)
 help(input)
@@ -23,7 +23,7 @@ help(input)
 
 print(input.__doc__)
 
-# DOCSTRING
+# 2- DOCSTRING
 # > dá o manual da função
 # > ajuda quando vc não sabe sobre informações sobre o comando
 
@@ -53,7 +53,7 @@ help(contador)
 
 # contador(i, f, p)
 
-# PARÂMETRO OPCIONAL
+# 3- PARÂMETRO OPCIONAL
 # > o end= do print é um parâmetro opcional
 
 
@@ -105,7 +105,7 @@ somar(c=7, a=3)
 # # A soma vale 6
 # # A soma vale 10
 
-# # ESCOPO DE VARIÁVEL
+# #4- ESCOPO DE VARIÁVEL
 
 
 def teste():
@@ -202,7 +202,7 @@ funcao()
 
 # existe escopo local e global na importação de biblioteca na chamada de função
 
-# RETURN
+# 5- RETURN
 
 
 def somar(a=0, b=0, c=0):
