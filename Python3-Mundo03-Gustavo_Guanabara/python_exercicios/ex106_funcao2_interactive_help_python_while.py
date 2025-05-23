@@ -1,5 +1,6 @@
 # Exercício Python 106: Faça um mini-sistema que utilize o Interactive Help do Python. O usuário vai digitar o comando e o manual vai aparecer. Quando o usuário digitar a palavra ‘FIM’, o programa se encerrará. Importante: use cores.
 import builtins
+from time import sleep
 
 cores = {
     "limpa": "\033[m",
@@ -19,12 +20,13 @@ def escreva(txt):
     print(f"{cores['fundoamareloateofinal']}~" * tamaho_linha)
     print(f"  {txt}")
     print(tamaho_linha * f"{cores['fundoamareloateofinal']}~{cores['limpa']}")
+    sleep(1)
 
 
 def biblioteca():
     while True:
-        escreva("SISTEMA DE AJUDA PyHELP")
-        resposta = input("Função ou Biblioteca > ").strip().lower()
+        escreva("SISTEMA DE AJUDA .__DOC__")
+        resposta = input("Função > ").strip().lower()
         if resposta == "fim":
             print("Programa finalizado!")
             break
