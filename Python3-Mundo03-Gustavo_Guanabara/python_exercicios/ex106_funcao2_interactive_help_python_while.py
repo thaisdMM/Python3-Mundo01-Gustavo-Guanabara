@@ -4,8 +4,9 @@ from time import sleep
 
 cores = {
     "limpa": "\033[m",
-    "azul": "\033[34m",
+    "verde": "\033[0;32m",
     "amarelo": "\033[33m",
+    "azul": "\033[34m",
     "pretoebranco": "\033[7;37m",
     "textovermelhofundoamarelo": "\033[31;43m",
     "sublinhadovermelhofundoazul": "\033[4;31;44m",
@@ -14,28 +15,33 @@ cores = {
 }
 
 
-def escreva(txt):
+def titulo(txt, cor=cores["fundoamareloateofinal"]):
 
-    tamaho_linha = len(txt) + 4
-    print(f"{cores['fundoamareloateofinal']}~" * tamaho_linha)
+    tamanho = len(txt) + 4
+    print(cor, end="")
+    print("~" * tamanho)
     print(f"  {txt}")
-    print(tamaho_linha * f"{cores['fundoamareloateofinal']}~{cores['limpa']}")
+    print("~" * tamanho)
+    print(cores["limpa"], end="")
     sleep(1)
 
 
-def biblioteca():
-    while True:
-        escreva("SISTEMA DE AJUDA .__DOC__")
-        resposta = input("Função > ").strip().lower()
-        if resposta == "fim":
-            print("Programa finalizado!")
-            break
-        else:
-            print(
-                f"{cores['sublinhadovermelhofundoazul']}Acessando o manual do comando: {resposta}{cores['limpa']}"
-            )
-            funcao = getattr(builtins, resposta)
-            print(f"{cores['pretoebranco']}{funcao.__doc__}{cores['limpa']}")
+def biblioteca(comando):
+    titulo(
+        f"Acessando o doc do comando: '{comando}'", cores["sublinhadovermelhofundoazul"]
+    )
+    print(cores["pretoebranco"], end="")
+    funcao = getattr(builtins, comando)
+    print(f"{funcao.__doc__}")
+    print(cores["limpa"], end="")
+    sleep(1)
 
 
-biblioteca()
+while True:
+    titulo("SISTEMA DE AJUDA Py.__DOC__")
+    resposta = input("Função > ").strip().lower()
+    if resposta == "fim":
+        break
+    else:
+        biblioteca(resposta)
+titulo(f"Programa finalizado!", cores["verde"])
