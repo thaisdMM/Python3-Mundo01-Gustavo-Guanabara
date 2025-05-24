@@ -8,7 +8,7 @@ def leiaInt(msg):
         entrada_usuario = input().strip()
         if entrada_usuario.isnumeric():
             break
-        if len(entrada_usuario) > 0:
+        if len(entrada_usuario) > 0: # tem pelo menos 2 caracteres, pois o len é >0
             if entrada_usuario[0] == "-" and entrada_usuario[1:].isnumeric():
                 break
         print("\033[0;31mERRO! Digite um número inteiro válido.\033[m")
