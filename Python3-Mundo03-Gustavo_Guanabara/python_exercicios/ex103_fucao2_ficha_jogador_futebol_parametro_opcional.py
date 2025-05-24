@@ -15,6 +15,6 @@ else:
     gols = 0
 if nome == "":
     ficha(gols=gols)
-    # > Não pega nome do input, vai pegar o nome definido na função e o gol que foi passado aqui no input
+    # > Não pega nome do input, vai pegar o nome definido na função(desconhecido) e o gol que foi passado aqui no input
 else:
     ficha(nome, gols)
