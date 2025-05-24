@@ -9,6 +9,7 @@ def maior(*numero):
     tamanho = len(numero)
     # essa função retorna uma tupla
     # se a tupla for vazia entao o tamanho dela é == 0 significa que não tem nada nela
+    ## tem que adicionar o if abaixo pois utilizando a função max() dá erro para a função maior() sem parâmetro
     if tamanho == 0:
         print(f"Foram informados 0 números.")
         print(f"O maior valor informado foi 0.")
