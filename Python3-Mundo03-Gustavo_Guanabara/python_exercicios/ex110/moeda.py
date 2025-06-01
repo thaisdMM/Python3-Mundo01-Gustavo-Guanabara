@@ -22,11 +22,14 @@ def moeda(numero=0, moeda="R$"):
     return f"{moeda}{numero:>.2f}".replace(".", ",")
 
 
-def resumo(preco, aumento, reducao):
+# \t tabulação, as vezes pode ser necessária mais de uma para o codigo ficar formatado
+def resumo(preco=0, aumento=10, reducao=5):
     print("-" * 40)
-    print(f'{"RESUMO DO VALOR":^40}')
+    print("RESUMO DO VALOR".center(40))
     print("-" * 40)
-    print(f"Preço analisado: {(moeda(preco)):>15}")
-    print(f"Metade do preço: {(metade(preco, True)):>15}")
-    print(f"{aumento:3}% de aumento: {aumentar(preco, aumento, True):>15}")
-    print(f"{reducao:3}% de reducao: {diminuir(preco, reducao, True):>15}")
+    print(f"Preço analisado: \t{(moeda(preco))}")
+    print(f"Dobro do preço: \t{dobro(preco, True)}")
+    print(f"Metade do preço: \t{(metade(preco, True))}")
+    print(f"{aumento}% de aumento: \t{aumentar(preco, aumento, True)}")
+    print(f"{reducao}% de reducao: \t{diminuir(preco, reducao, True)}")
+    print("-" * 40)
