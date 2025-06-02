@@ -4,6 +4,7 @@ from pacote_utilidades.subpacote_dado import dado
 from pacote_utilidades.subpacote_moeda import moeda
 
 preco = dado.leiaDinheiro("Digite o preco: R$")
-moeda.resumo(preco, 80, 35)
+moeda.resumo(preco, 35, 22)
+#moeda.resumo(preco, 80, 35)
 # moeda.resumo(preco, 12, 20)
 # moeda.resumo(preco)
