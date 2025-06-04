@@ -22,9 +22,9 @@ while True:
     )
     if resposta == 1:
         interface_sistema.titulo("LISTA DE PESOAS CADASTRADAS")
+        arquivo_sistema.ler_arquivo(arquivo) 
     elif resposta == 2:
         interface_sistema.titulo("NOVO CADASTRO")
-
     elif resposta == 3:
         interface_sistema.titulo("Saindo do Sistema... Até logo!")
         break
