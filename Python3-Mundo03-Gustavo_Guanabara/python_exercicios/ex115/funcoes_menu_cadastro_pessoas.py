@@ -26,12 +26,7 @@ def menu():
 def cadastrar_pessoa(nome, idade):
     file_path = "lista_pessoas_idade_sistema_ex115.txt"
     with open(file_path, "a") as arquivo:
-        arquivo.write(
-            f"{nome}\n",
-        )
-        arquivo.write(
-            f"{idade} anos\n",
-        )
+        arquivo.write(f"{nome};{idade} anos\n")
 
 
 def ver_pessoas_cadastradas():
@@ -44,8 +39,21 @@ def ver_pessoas_cadastradas():
     except PermissionError:
         print("Você não tem permissão para ler esse arquivo.")
     else:
-        for line in conteudo:
-            print(line, end="")
+        junta_conteudo = conteudo.strip()
+        separa_conteudo = junta_conteudo.split(";")
+        
+        # for contador, valor in range(1, len(separa_conteudo) +1):
+        #     if contador % 2 != 0:
+        #         print(f"{valor.ljust(30)}", end=" ")
+        #     if contador % 2 == 0:
+        #         print(f"{valor.rjust(10)}\n")
+            
+        # print(f"{separa_conteudo}", end=" ")
+        # print()
+        # # for line in conteudo:
+
+        # for line in conteudo:
+        #     print(line, end="")
         # print(conteudo)
         # for line in conteudo:
         #     line.strip()
