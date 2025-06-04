@@ -5,10 +5,6 @@ def linha():
     print("-" * 50)
 
 
-def titulo(msg):
-    linha()
-    print(msg.center(50))
-    linha()
 
 
 def menu():
