@@ -1,9 +1,28 @@
+import os
 from library.interface import interface_sistema
+from library.arquivo import arquivo_sistema
 from time import sleep
+
+# Caminho absoluto da pasta onde está o sistema.py
+PASTA_BASE = os.path.dirname(os.path.abspath(__file__))
+
+# Caminho absoluto até o arquivo .txt
+CAMINHO_ARQUIVO = os.path.join(PASTA_BASE, "lista_pessoas_idade_sistema_ex115.txt")
+
+
+arquivo = CAMINHO_ARQUIVO
+
+if arquivo_sistema.arquivo_existe(arquivo):
+    print("Arquivo encontrado com sucesso!")
+else:
+    print("Arquivo não encontrado!")
+    arquivo_sistema.criar_arquivo(arquivo)
 
 
 while True:
-    resposta = interface_sistema.menu(["Ver Pessoas Cadastradas", "Cadastrar Nova Pessoa", "Sair do Sistema"])
+    resposta = interface_sistema.menu(
+        ["Ver Pessoas Cadastradas", "Cadastrar Nova Pessoa", "Sair do Sistema"]
+    )
     if resposta == 1:
         interface_sistema.titulo("LISTA DE PESOAS CADASTRADAS")
     elif resposta == 2:
