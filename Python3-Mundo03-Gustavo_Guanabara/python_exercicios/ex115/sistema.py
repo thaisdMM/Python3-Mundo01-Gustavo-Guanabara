@@ -12,10 +12,7 @@ CAMINHO_ARQUIVO = os.path.join(PASTA_BASE, "lista_pessoas_idade_sistema_ex115.tx
 
 arquivo = CAMINHO_ARQUIVO
 
-if arquivo_sistema.arquivo_existe(arquivo):
-    print("Arquivo encontrado com sucesso!")
-else:
-    print("Arquivo não encontrado!")
+if not arquivo_sistema.arquivo_existe(arquivo):
     arquivo_sistema.criar_arquivo(arquivo)
 
 
