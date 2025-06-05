@@ -21,14 +21,14 @@ while True:
         ["Ver Pessoas Cadastradas", "Cadastrar Nova Pessoa", "Sair do Sistema"]
     )
     if resposta == 1:
-        #interface_sistema.titulo("LISTA DE PESOAS CADASTRADAS")
-        arquivo_sistema.ler_arquivo(arquivo) 
+        # interface_sistema.titulo("LISTA DE PESOAS CADASTRADAS")
+        arquivo_sistema.ler_arquivo(arquivo)
     elif resposta == 2:
         interface_sistema.titulo("NOVO CADASTRO")
-        nome = input("Nome: ")
+        nome = input("Nome: ").strip().title()
         idade = interface_sistema.leiaInt("Idade: ")
-        arquivo_sistema.cadastrar_arquivo(arquivo,nome, idade)
-        
+        arquivo_sistema.cadastrar_arquivo(arquivo, nome, idade)
+
     elif resposta == 3:
         interface_sistema.titulo("Saindo do Sistema... Até logo!")
         break

@@ -31,7 +31,10 @@ def ler_arquivo(nome):
         print("Você não tem permissão para ler esse arquivo.")
     else:
         interface_sistema.titulo("LISTA DE PESOAS CADASTRADAS")
-        print(conteudo)
+        for linha in conteudo:
+            dado = linha.split(";")
+            dado[1] = dado[1].replace("\n", "")
+            print(f"{dado[0]:<30}{dado[1]:>3} anos")
 
 
 def cadastrar_arquivo(file_path, nome="desconhecido", idade=0):
@@ -47,19 +50,3 @@ def cadastrar_arquivo(file_path, nome="desconhecido", idade=0):
         print("Você não tem permissão para editar esse arquivo.")
     except:
         print("Houve ERRO genérico na abertura do arquivo.")
-
-
-# #codigo do professor
-# def cadastrar_arquivo(file_path,nome="desconhecido", idade=0):
-#     try:
-#         a = open(file_path, "at")
-#     except:
-#         print("Houve um erro na abertura do arquivo.")
-#     else:
-#         try:
-#             a.write(f"{nome};{idade}\n")
-#         except:
-#             print("Houve algum erro ao ler ou adicionar dados no arquivo.")
-#         else:
-#             print(f"Novo resgistro de {nome} adicionado com sucesso!")
-#             a.close()

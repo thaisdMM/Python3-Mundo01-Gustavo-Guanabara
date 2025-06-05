@@ -1,5 +1,6 @@
-Paulo;24
-José;56
-Ana;35
-Marcela;15
-Maria;99
+José;35
+Gustavo;41
+Maria de Souza;80
+Júlio Siqueira;56
+Hugo Souza;33
+Maria Das Graças;77
