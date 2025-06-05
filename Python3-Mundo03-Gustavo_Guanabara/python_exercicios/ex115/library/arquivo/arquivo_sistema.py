@@ -32,3 +32,23 @@ def ler_arquivo(nome):
     else:
         interface_sistema.titulo("LISTA DE PESOAS CADASTRADAS")
         print(conteudo)
+
+
+def append_arquivo(file_path,nome, idade):
+    try:
+        with open(file_path, "at") as arquivo:
+            arquivo.write(f"{nome}; {idade}\n")
+    except FileNotFoundError:
+        print("O arquivo não foi encontrado. Verifique se o arquivo existe.")
+    except PermissionError:
+        print("Você não tem permissão para editar esse arquivo.")
+    else:
+        interface_sistema.titulo("NOVO CADASTRO")
+
+
+
+
+def cadastrar_pessoa(nome, idade):
+    file_path = "lista_pessoas_idade_sistema_ex115.txt"
+    with open(file_path, "a") as arquivo:
+        arquivo.write(f"{nome};{idade} anos\n")
