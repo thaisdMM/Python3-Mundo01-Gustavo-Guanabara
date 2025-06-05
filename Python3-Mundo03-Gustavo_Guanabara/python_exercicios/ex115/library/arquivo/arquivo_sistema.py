@@ -34,21 +34,32 @@ def ler_arquivo(nome):
         print(conteudo)
 
 
-def append_arquivo(file_path,nome, idade):
+def cadastrar_arquivo(file_path, nome="desconhecido", idade=0):
     try:
         with open(file_path, "at") as arquivo:
-            arquivo.write(f"{nome}; {idade}\n")
-    except FileNotFoundError:
-        print("O arquivo não foi encontrado. Verifique se o arquivo existe.")
+            try:
+                arquivo.write(f"{nome};{idade}\n")
+            except:
+                print("Houve algum ERRO ao adicionar dados no arquivo.")
+            else:
+                print(f"Novo resgistro de {nome} adicionado com sucesso!")
     except PermissionError:
         print("Você não tem permissão para editar esse arquivo.")
-    else:
-        interface_sistema.titulo("NOVO CADASTRO")
+    except:
+        print("Houve ERRO genérico na abertura do arquivo.")
 
 
-
-
-def cadastrar_pessoa(nome, idade):
-    file_path = "lista_pessoas_idade_sistema_ex115.txt"
-    with open(file_path, "a") as arquivo:
-        arquivo.write(f"{nome};{idade} anos\n")
+# #codigo do professor
+# def cadastrar_arquivo(file_path,nome="desconhecido", idade=0):
+#     try:
+#         a = open(file_path, "at")
+#     except:
+#         print("Houve um erro na abertura do arquivo.")
+#     else:
+#         try:
+#             a.write(f"{nome};{idade}\n")
+#         except:
+#             print("Houve algum erro ao ler ou adicionar dados no arquivo.")
+#         else:
+#             print(f"Novo resgistro de {nome} adicionado com sucesso!")
+#             a.close()
